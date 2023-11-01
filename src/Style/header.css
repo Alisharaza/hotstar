@@ -1,0 +1,93 @@
+.nav {
+  width: 120px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  /* border: 1px solid white; */
+  display: flex;
+  align-items: start;
+  justify-content: flex-start;
+  padding: 10px;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 100;
+  background: #0f1014;
+}
+.nav:hover {
+  background: linear-gradient(to right, #0f1014 30%, transparent 100%);
+  width: 300px;
+}
+.logoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.img {
+  width: 80px;
+  padding: 10px;
+}
+.nav-menu {
+  padding: 20px;
+  /* width: 80px; */
+  height: 100%;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  /* font-size: 23px; */
+  justify-content: center;
+
+  align-items: center;
+}
+.subscribeBtn {
+  width: 100px;
+  padding: 5px;
+  border: none;
+  align-items: center;
+  border-radius: 20px;
+  color: #ffcc75;
+  background: #ffcc751a;
+}
+.navItemWrapper {
+  height: 40px;
+  position: relative;
+}
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #828282;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.3rem;
+  transition: all 0.3s ease-in-out;
+  width: max-content;
+}
+.navItem:hover,
+.active .navItem {
+  color: #fff;
+  /* transform: scale(1.1); */
+  font-size: 1.6rem;
+}
+
+.fillIcon {
+  display: none;
+}
+.navItem:hover .fillIcon,
+.active .navItem .fillIcon {
+  display: block;
+}
+.navItem:hover .outlineIcon,
+.active .navItem .outlineIcon {
+  display: none;
+}
+.navTitle {
+  font-size: 16px;
+  opacity: 0;
+  visibility: hidden;
+}
+.nav:hover .navTitle {
+  opacity: 1;
+  visibility: visible;
+}

@@ -1,0 +1,190 @@
+.header {
+  font-weight: 400px;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+.cardContainer {
+  position: relative;
+  background-color: #252833;
+  cursor: pointer;
+}
+
+.imagDetails img {
+  border-radius: 10px;
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  object-position: top;
+}
+.imagDetails .para {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  text-align: center;
+  gap: 3px;
+  font-size: 13px;
+  text-align: center;
+  font-weight: 400;
+  align-items: center;
+}
+.imagDetails .para span {
+  color: rgb(4, 128, 0);
+}
+.imagDetails .title {
+  position: absolute;
+  top: 80%;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  text-align: center;
+  gap: 3px;
+  font-size: 16px;
+  text-align: center;
+  font-weight: 400;
+}
+.button {
+  flex: 1;
+  display: flex;
+  gap: 5px;
+  width: 100%;
+  align-items: center;
+}
+.button .watchNowBtn {
+  padding-inline: 10px 15px;
+  padding-block: 5px;
+  white-space: nowrap;
+  align-items: center;
+  border-radius: 5px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  display: flex;
+  border: none;
+  flex: 1;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.2s ease-in-out;
+  justify-content: center;
+}
+.watchNowBtn span {
+  font-size: 18px;
+  margin-left: 10px;
+}
+.watchNowBtn:hover {
+  transform: scale3d(1.05, 1.05, 1) perspective(500px);
+}
+.watchBtn:hover {
+  transform: scale3d(1.05, 1.05, 1) perspective(500px);
+}
+.linkBtn {
+  flex: 1;
+}
+.watchListBtn {
+  background-color: #252833;
+  border: none;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  color: white;
+  margin-right: 10px;
+}
+.watchListBtn1 {
+  background-color: #ffffff33;
+  border: none;
+  border-radius: 7px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  color: white;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.watchListBtn1:hover {
+  transform: scale3d(1.05, 1.05, 1) perspective(500px);
+}
+.watchListBtn span {
+  cursor: pointer;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  background: hsl(0deg 0% 100% / 8%);
+  padding: 5px;
+}
+.watchListBtn1 span {
+  cursor: pointer;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  font-weight: 600;
+  padding: 5px;
+}
+.cardicon {
+  height: 30px;
+  width: 30px;
+}
+.info {
+  display: flex;
+  font-size: 14px;
+  margin: 10px 0px;
+  gap: 10px;
+  list-style: none;
+}
+.infoItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.dot {
+  width: 6px;
+  border-radius: 50%;
+
+  height: 6px;
+  background: grey;
+}
+.paraInfo p {
+  width: 100%;
+  font-size: 16px;
+  padding-block: 10px;
+}
+.hiddingData {
+  display: none;
+  border-radius: 10px;
+}
+
+.cardContainer:hover {
+  z-index: 100 !important;
+  padding: 10px;
+  /* transform: scale3d(1.5, 1.5, 1) translate3d(0px, 0, 0) perspective(500px); */
+  transition: all 0.3s ease-in-out;
+}
+.cardContainer:hover .hiddingData {
+  display: block;
+  /* overflow: hidden; */
+  position: absolute;
+  width: 180%;
+  top: -10%;
+  left: 0;
+  z-index: 100;
+  background-color: #252833;
+}
+.cardImage img {
+  width: 100%;
+  object-position: top;
+
+  max-height: 150px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  object-fit: cover;
+  aspect-ratio: 16/9;
+}
+.cardDetails {
+  padding: 10px;
+  width: 100%;
+  border-radius: 10px;
+}

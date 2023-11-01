@@ -1,0 +1,12 @@
+.movieHeading h1 {
+  font-size: 20px;
+  font-weight: 600;
+  padding: 5px;
+}
+.movoieContainer {
+  /* position: fixed; */
+}
+.moviePaly {
+  width: 100%;
+  height: 100%;
+}

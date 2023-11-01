@@ -1,0 +1,176 @@
+.carousel:last-child {
+  position: absolute;
+  /* top: 0; */
+  right: 0;
+  width: 500px;
+  bottom: 0;
+}
+
+.carousel-root {
+  position: relative;
+}
+
+.carousel-slider img {
+  /* height: 90vh;
+  object-fit: cover; */
+  display: none !important;
+}
+
+.carousel .thumb {
+  border-radius: 5px;
+  z-index: 100 !important;
+  border: none !important;
+  padding: 0 !important;
+  cursor: pointer;
+  height: 50px;
+}
+.thumbs {
+  padding: 10px;
+}
+.carousel .thumb img {
+  object-fit: cover !important;
+  width: 100% !important;
+  aspect-ratio: 3/2 !important;
+}
+.carousel .thumb:hover {
+  transform: scale3d(1.1, 1.1, 1) perspective(500px);
+  border: 1px solid white !important;
+}
+.carousel .thumb.selected {
+  border: 1px solid white !important;
+}
+.mainSlider {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 90vh;
+  width: 100%;
+}
+.leftSide {
+  position: absolute;
+  bottom: 0;
+  padding: 40px;
+  left: 0;
+}
+h1 {
+  text-align: left;
+}
+.overlay {
+  background: linear-gradient(to right, #0f1014 0%, transparent 100%),
+    linear-gradient(
+      to top,
+      rgba(15, 16, 20, 0.95) 0%,
+      rgba(15, 16, 20, 0) 20.46%
+    );
+  position: absolute;
+  inset: 0;
+  pointer-events: all;
+}
+.listDetails ul {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  align-items: center;
+  list-style: none;
+  margin-top: 15px;
+}
+.listDetails li {
+  font-size: 12px;
+}
+.dot {
+  height: 5px;
+  width: 5px;
+  background-color: #ffffff33;
+}
+
+.listDetails button {
+  width: 78px;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  background-color: #ffffff33;
+  color: #ffffffd6;
+  font-size: 12px;
+}
+.title {
+  display: flex;
+  text-align: left;
+  line-height: 30px;
+  width: 400px;
+  color: #ffffffd6;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.typesOfThings {
+  text-align: left;
+}
+.language {
+  width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.language button {
+  background-color: #ffffff14;
+  width: 110px;
+  color: #ffffff;
+  padding: 15px;
+  border-radius: 6px;
+  font-size: 12px;
+  border: none;
+  margin-bottom: 15px;
+}
+.language span {
+  font-size: 12px;
+  color: #ffffff19;
+  font-weight: bold;
+}
+.language li {
+  font-size: 12px;
+}
+.language .greater {
+  font-size: 20px;
+  height: 50px;
+  font-weight: 800;
+}
+.watchBtn {
+  cursor: pointer;
+  width: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  background-color: #ffffff33;
+  color: #ffffff;
+}
+.watchBtn span {
+  font-size: 16px;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: #ffffff;
+  cursor: pointer;
+}
+.playIcon {
+  width: 30px;
+  height: 30px;
+  color: #ffffffff;
+}
+.btnDetains {
+  display: flex;
+  gap: 10px;
+}
+.watchList {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  cursor: pointer;
+  width: 58px;
+  background-color: #ffffff33;
+  border-radius: 8px;
+  border: none;
+}

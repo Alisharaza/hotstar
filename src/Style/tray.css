@@ -1,0 +1,28 @@
+.react-multi-carousel-list {
+  overflow: visible !important;
+}
+.react-multi-carousel-list:hover {
+  z-index: 100;
+}
+.trayheading {
+  color: #e1e6f0;
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.react-multi-carousel-item:hover {
+  z-index: 100;
+}
+.react-multi-carousel-track {
+  gap: 8px !important;
+}
+.tray {
+  padding-bottom: 20px;
+}
+.wraptrayHeadingMore {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}

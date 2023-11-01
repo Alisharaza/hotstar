@@ -1,0 +1,56 @@
+.container {
+  height: 280px;
+  width: 100vw;
+  margin-top: 20px;
+  position: relative;
+  /* margin-left: ; */
+}
+.miniContainer {
+  height: 280px;
+  border-radius: 20px;
+  width: 95%;
+  display: flex;
+  gap: 50px;
+  /* position: absolute; */
+  background: #16181f;
+}
+
+.leftContainer img {
+  width: 500px;
+  height: 280px;
+
+  border-radius: 20px;
+}
+.logoText {
+  display: flex;
+  margin-bottom: 1rem;
+  margin-top: 40px;
+}
+.logoText img {
+  width: 60px;
+  height: 50px;
+}
+.para {
+  padding-left: 1rem;
+}
+.para p {
+  font-size: 0.8rem;
+  padding-top: 0.5rem;
+  color: #8f98b2;
+}
+.text p {
+  width: 80%;
+}
+.text .btn {
+  margin-top: 20px;
+  width: 200px;
+  padding: 14px 64px;
+  background-color: #252833;
+  border-radius: 10px;
+  border: none;
+  color: #e1e6f0;
+  font-weight: 700px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+}

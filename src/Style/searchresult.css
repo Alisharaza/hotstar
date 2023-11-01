@@ -1,0 +1,5 @@
+.searchCardsContainer {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(50px, 1fr));
+  gap: 16px;
+}

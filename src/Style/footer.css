@@ -1,0 +1,46 @@
+.mid {
+  margin-top: 5%;
+  margin-bottom: 2%;
+}
+
+.foot {
+  display: flex;
+  font-weight: bold;
+  color: white;
+  margin-left: 3%;
+  justify-content: space-around;
+  gap: 40px;
+  margin-right: 50px;
+}
+.company h3 {
+  margin-bottom: 18px;
+}
+.company ul {
+  color: white;
+}
+.footerLinks {
+  list-style: none;
+  margin-bottom: 10px;
+}
+.footerLinks a {
+  text-decoration: none;
+  color: #8f98b2;
+  font-size: 14px;
+}
+
+.footerLogo span {
+  width: 30px;
+  color: white;
+  padding: 5px;
+  gap: 2rem;
+  flex-direction: row;
+}
+.footer-para {
+  margin-top: 30px;
+  display: flex;
+}
+.footer-para p {
+  width: 300px;
+  color: #8f98b2;
+  font-size: 14px;
+}

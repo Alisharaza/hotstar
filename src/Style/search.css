@@ -1,0 +1,47 @@
+.searchContainer {
+  min-height: 100vh;
+}
+.searchBox {
+  margin: 1.5rem 3rem 0 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  /* gap: 10px; */
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #252833;
+}
+.searchBox input {
+  color: white;
+  width: 100%;
+
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  padding: 12px 24px;
+}
+.searchIcon {
+  width: 30px;
+  margin-left: 10px;
+  height: 30px;
+  font-size: 16px;
+}
+.closeIcon {
+  position: absolute;
+  right: 0;
+  padding: 1rem;
+  cursor: pointer;
+}
+.react-multi-carousel-list {
+  overflow: auto !important;
+  overflow-x: hidden !important;
+}
+.heading {
+  color: #e1e6f0;
+  font-size: 20px;
+  width: 100vwpx;
+  padding-top: 20px;
+  margin-left: 20px;
+  padding-bottom: 10px;
+}

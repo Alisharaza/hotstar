@@ -1,13 +1,66 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  background: #0f1014;
+  background: linear-gradient(
+    180deg,
+    #081734,
+    #0d1628 73px,
+    #0e1420 168px,
+    #0f1014 256px,
+    #0f1014
+  );
+  background: ;
+  color: #fff;
+  margin: 0;
+  font-family: sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+.layoutMain {
+  position: relative;
+  margin-left: 120px;
+}
+.loginBtn {
+  padding: 12px;
+  width: 200px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  font-size: 16px;
+  color: #ffffff;
+  background: #095ae5;
+  border: none;
+}
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.react-multi-carousel-item:hover {
+  z-index: 1000;
 }

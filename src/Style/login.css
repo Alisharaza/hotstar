@@ -1,0 +1,110 @@
+.mainLoginPage {
+  display: flex;
+  justify-content: center;
+
+  background-color: #000000d6;
+}
+.miniLoginPage {
+  display: flex;
+  align-items: center;
+  position: relative;
+  color: #fff;
+  width: 850px;
+  height: 500px;
+  border: 1px solid rgba(229, 231, 235);
+  border-radius: 15px;
+  z-index: 1;
+  /* background-color: #16181f; */
+}
+.miniLoginPage .cross {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+
+  position: absolute;
+  right: 10px;
+  padding: 5px;
+  top: 10px;
+}
+.cross .close {
+  width: 32px;
+  height: 32px;
+  color: #707a94;
+  cursor: pointer;
+}
+.leftImageSlider {
+  height: 488px;
+  width: 400px;
+}
+.leftImageSlider img {
+  height: 488px;
+  width: 300px;
+  object-fit: cover;
+}
+
+.rightSideInfo h1 {
+  font-size: 20px;
+  color: #e1e6f0;
+  position: absolute;
+  top: 50px;
+  /* padding: 50px; */
+}
+.loginDetails {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 100px;
+  display: flex;
+  gap: 5px;
+  width: 250px;
+}
+.loginDetails .input {
+  height: 40px;
+  width: 100%;
+  font-size: 16px;
+  color: #fff;
+  border-radius: 10px;
+  padding: 8px;
+  border: 1px solid#4b5166;
+  background-color: inherit;
+}
+.privacyPara {
+  font-size: 9px;
+  width: 320px;
+  margin-bottom: 50px;
+  color: #707a94;
+}
+.privacyPara span {
+  color: #8f98b2;
+}
+.para2 {
+  color: #8f98b2;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 320px;
+}
+.para2 span {
+  color: #3586f0;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.signUpBtn {
+  padding: 10px;
+  width: max-content;
+  border-radius: 10px;
+  background-color: #3586f0;
+  border: none;
+  color: #fff;
+  margin-bottom: 10px;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+}
+.wrapInputError {
+  margin: 5px;
+}
+.error {
+  margin-left: 10px;
+  font-size: 12px;
+  color: rgba(216, 61, 61, 0.567);
+}
