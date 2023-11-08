@@ -14,8 +14,8 @@ import Pagination from "./Components/Pagination";
 function App() {
   return (
     <Router>
-      <Layout>
-        <Routes>
+      <Routes>
+        <Route path="/" element={<Layout />}>
           <Route path="/" element={<Home />} />
           <Route path="/myspace" element={<MySpace />} />
           <Route path="/tv" element={<Tv />} />
@@ -23,10 +23,10 @@ function App() {
           <Route path="/search" element={<Search />} />
           <Route path="/movies" element={<Movies />} />
           <Route path="/movieInfo/:id" element={<MovieInfo />} />
-          <Route path="/moviePlayPage/:id" element={<MoviePlayPage />} />
           <Route path="/pagination/:id" element={<Pagination />} />
-        </Routes>
-      </Layout>
+        </Route>
+        <Route path="/moviePlayPage/:id" element={<MoviePlayPage />} />
+      </Routes>
     </Router>
   );
 }
