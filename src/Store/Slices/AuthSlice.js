@@ -2,7 +2,7 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import api from "../../Components/Services/GlobalApi";
 import { useGetRequest } from "../../Hooks/useGetRequest";
-
+import { useNavigate } from "react-router-dom";
 export const signUpUser = createAsyncThunk(
   "user/signUpUser",
   async (userData) => {
@@ -19,6 +19,7 @@ export const logInUser = createAsyncThunk(
   async (userData) => {
     try {
       const response = await api.post("/user/login", { ...userData });
+
       return response.data;
     } catch (error) {
       return Promise.reject(error.response.data);

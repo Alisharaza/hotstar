@@ -105,15 +105,10 @@ function Login({ onClose, setModalPage }) {
                 />
                 {errors.password && <p className="error">{errors.password}</p>}
               </div>
-              {isAuthenticated ? (
-                // Render this block when isAuthenticated is true
-                <p>Welcome, you are logged in!</p>
-              ) : (
-                // Render this block when isAuthenticated is false
-                <button className="loginBtn" onClick={handleButtonClick}>
-                  Login
-                </button>
-              )}
+
+              <button className="loginBtn" onClick={handleButtonClick}>
+                Login
+              </button>
 
               <p className="privacyPara">
                 By proceeding you confirm that you are above 18 years of age and

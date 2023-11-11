@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import "../Style/login.css";
 import { AiOutlineClose } from "react-icons/ai";
 import { signUpUser } from "../Store/Slices/AuthSlice";
@@ -7,6 +7,9 @@ import { useDispatch, useSelector } from "react-redux";
 function SignUp({ onClose, setModalPage }) {
   const dispatch = useDispatch();
   const error = useSelector((state) => state.auth.error);
+  const { isAuthenticated } = useSelector((state) => state.auth);
+  // console.log(isAuthenticated);
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -25,7 +28,12 @@ function SignUp({ onClose, setModalPage }) {
   };
   const handleButtonClick = (e) => {
     dispatch(signUpUser(formData));
+    console.log(dispatch(signUpUser(formData)));
   };
+
+  useMemo(() => {
+    isAuthenticated ? setModalPage(false) : setModalPage(true);
+  }, [isAuthenticated]);
   const handleSubmit = (e) => {
     e.preventDefault();
     const { name, email, password } = formData;
