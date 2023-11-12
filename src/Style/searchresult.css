@@ -3,3 +3,6 @@
   grid-template-columns: repeat(6, minmax(50px, 1fr));
   gap: 16px;
 }
+.searchHeading {
+  padding: 16px 0px;
+}

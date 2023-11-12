@@ -1,8 +1,8 @@
 .searchContainer {
   min-height: 100vh;
+  margin: 1.5rem 3rem 0 0;
 }
 .searchBox {
-  margin: 1.5rem 3rem 0 0;
   position: relative;
   display: flex;
   align-items: center;

@@ -4,19 +4,24 @@ import "../Style/searchresult.css";
 import Card from "./Card";
 
 const SearchResult = ({ searchValue }) => {
+  console.log(searchValue);
   const { data, isLoading, isError, get } = useGetRequest();
   //   console.log(data);
   useEffect(() => {
     get(`/ott/show?search={"title":"${searchValue}"}`);
-  }, []);
+  }, [searchValue]);
   return (
     <div className="searchResultsWrapper">
-      <h3 className="searchHeading">MORE RESULT</h3>
-      <div className="searchCardsContainer">
-        {data?.map((show) => (
-          <Card {...show} key={show._id} />
-        ))}
-      </div>
+      <h3 className="searchHeading">Search results for "{searchValue}"</h3>
+      {isError ? (
+        <p>No results for {searchValue}</p>
+      ) : (
+        <div className="searchCardsContainer">
+          {data?.map((show) => (
+            <Card {...show} key={show._id} />
+          ))}
+        </div>
+      )}
     </div>
   );
 };

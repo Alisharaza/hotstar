@@ -7,6 +7,7 @@ import HeroCarousel from "../Components/Carousel";
 import Tray from "../Components/Tray";
 function Search({ heading }) {
   const [searchValue, setSearchValue] = useState("");
+
   const handleChange = (e) => setSearchValue(e.target.value);
   const clearSearch = () => setSearchValue("");
 

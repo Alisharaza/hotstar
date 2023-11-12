@@ -61,6 +61,7 @@ const userSlice = createSlice({
     builder
       .addCase(signUpUser.pending, (state) => {
         state.loading = true;
+        state.error = null;
       })
       .addCase(signUpUser.fulfilled, (state, { payload }) => {
         state.isAuthenticated = true;
@@ -79,6 +80,7 @@ const userSlice = createSlice({
       })
       .addCase(logInUser.pending, (state) => {
         state.loading = true;
+        state.error = null;
       })
       .addCase(logInUser.fulfilled, (state, { payload }) => {
         state.isAuthenticated = true;

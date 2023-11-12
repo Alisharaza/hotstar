@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 function SignUp({ onClose, setModalPage }) {
   const dispatch = useDispatch();
-  const error = useSelector((state) => state.auth.error);
+  const { error } = useSelector((state) => state.auth);
   const { isAuthenticated } = useSelector((state) => state.auth);
   // console.log(isAuthenticated);
 
@@ -16,7 +16,7 @@ function SignUp({ onClose, setModalPage }) {
     password: "",
     appType: "ott",
   });
-  const [errors, setErrors] = useState({
+  const [errors, setErrors] = useState({ 
     name: "",
     email: "",
     password: "",
@@ -31,9 +31,6 @@ function SignUp({ onClose, setModalPage }) {
     console.log(dispatch(signUpUser(formData)));
   };
 
-  useMemo(() => {
-    isAuthenticated ? setModalPage(false) : setModalPage(true);
-  }, [isAuthenticated]);
   const handleSubmit = (e) => {
     e.preventDefault();
     const { name, email, password } = formData;
