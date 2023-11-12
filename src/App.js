@@ -10,6 +10,7 @@ import Movies from "./pages/Movies";
 import MovieInfo from "./Components/MovieInfo";
 import MoviePlayPage from "./pages/MoviePlayPage";
 import Pagination from "./Components/Pagination";
+import More from "./pages/More";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/movies" element={<Movies />} />
           <Route path="/movieInfo/:id" element={<MovieInfo />} />
           <Route path="/pagination/:id" element={<Pagination />} />
+          <Route path="/more/:heading" element={<More />} />
         </Route>
         <Route path="/moviePlayPage/:id" element={<MoviePlayPage />} />
       </Routes>

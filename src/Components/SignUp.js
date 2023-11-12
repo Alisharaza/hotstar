@@ -1,14 +1,20 @@
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import "../Style/login.css";
 import { AiOutlineClose } from "react-icons/ai";
 import { signUpUser } from "../Store/Slices/AuthSlice";
 import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 function SignUp({ onClose, setModalPage }) {
   const dispatch = useDispatch();
-  const { error } = useSelector((state) => state.auth);
-  const { isAuthenticated } = useSelector((state) => state.auth);
-  // console.log(isAuthenticated);
+  const { error, isAuthenticated } = useSelector((state) => state.auth);
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (isAuthenticated) {
+      onClose();
+      navigate("/");
+    }
+  }, [isAuthenticated]);
 
   const [formData, setFormData] = useState({
     name: "",
@@ -16,7 +22,7 @@ function SignUp({ onClose, setModalPage }) {
     password: "",
     appType: "ott",
   });
-  const [errors, setErrors] = useState({ 
+  const [errors, setErrors] = useState({
     name: "",
     email: "",
     password: "",
@@ -25,10 +31,6 @@ function SignUp({ onClose, setModalPage }) {
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
-  };
-  const handleButtonClick = (e) => {
-    dispatch(signUpUser(formData));
-    console.log(dispatch(signUpUser(formData)));
   };
 
   const handleSubmit = (e) => {
@@ -114,9 +116,7 @@ function SignUp({ onClose, setModalPage }) {
                 />
                 {errors.password && <p className="error">{errors.password}</p>}
               </div>
-              <button className="loginBtn" onClick={handleButtonClick}>
-                Sign up
-              </button>
+              <button className="loginBtn">Sign up</button>
               {error && <p className="error">{error}</p>}
               <p className="privacyPara">
                 By proceeding you confirm that you are above 18 years of age and

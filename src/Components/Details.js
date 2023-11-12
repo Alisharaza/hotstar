@@ -5,7 +5,6 @@ import "../Style/carousel.css";
 import { useGetRequest } from "../Hooks/useGetRequest";
 import { Link } from "react-router-dom";
 const Details = ({ movie }) => {
-  console.log(movie);
   const { _id } = movie;
   const { patch } = useGetRequest();
   const [isAdded, setIsAdded] = useState(false);

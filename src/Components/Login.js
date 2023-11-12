@@ -6,7 +6,15 @@ import { logInUser } from "../Store/Slices/AuthSlice";
 import { useNavigate } from "react-router-dom";
 
 function Login({ onClose, setModalPage }) {
+  const dispatch = useDispatch();
   const { isAuthenticated } = useSelector((state) => state.auth);
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (isAuthenticated) {
+      onClose();
+      navigate("/");
+    }
+  }, [isAuthenticated]);
 
   const [formData, setFormData] = useState({
     email: "",
@@ -17,22 +25,10 @@ function Login({ onClose, setModalPage }) {
     email: "",
     password: "",
   });
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
-
-  // if (isAuthenticated) {
-  //   navigate("/");
-  // } else {
-  //   navigate("/myspace");
-  // }
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
-  };
-
-  const handleButtonClick = (e) => {
-    dispatch(logInUser(formData));
   };
 
   const handleSubmit = (e) => {
@@ -52,23 +48,25 @@ function Login({ onClose, setModalPage }) {
       newErrors.password = "Password is required";
     } else if (!isValidEmail(email)) {
       newErrors.email = "Invalid email format";
-    } else if (password.length < 5) {
-      newErrors.password = "Password must be at least 5 characters";
+    } else if (password.length < 6) {
+      newErrors.password = "Password must be at least 6 characters";
     }
+
     // Update the errors state with the new error messages
     setErrors(newErrors);
+
     // If there are no errors, you can proceed with form submission
     if (!newErrors.email && !newErrors.password) {
       // Dispatch login action or perform other actions
       dispatch(logInUser(formData));
     }
   };
-
   const handleClick = (e) => {
     if (e.target === e.currentTarget) {
       onClose();
     }
   };
+
   return (
     <div className="modalOverlay" onClick={handleClick}>
       <div className="mainLoginPage">
@@ -106,9 +104,7 @@ function Login({ onClose, setModalPage }) {
                 {errors.password && <p className="error">{errors.password}</p>}
               </div>
 
-              <button className="loginBtn" onClick={handleButtonClick}>
-                Login
-              </button>
+              <button className="loginBtn">Login</button>
 
               <p className="privacyPara">
                 By proceeding you confirm that you are above 18 years of age and

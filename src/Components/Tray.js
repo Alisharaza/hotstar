@@ -4,6 +4,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Card from "./Card";
 import { requests } from "./Services/RequestParams";
+import { useNavigate } from "react-router-dom";
 const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
@@ -42,18 +43,22 @@ const Tray = ({ heading, type, watchlist, page = 1 }) => {
     }
     get(queryString);
   }, []);
-
+  const navigate = useNavigate();
+  const handleViewAll = () => {
+    navigate(`/more/${heading}?type=${type}`);
+  };
   if (watchlist && !data?.shows) return <></>;
   return (
     <div className="tray">
       <div className="wraptrayHeadingMore">
         <h3 className="trayheading">{heading}</h3>
-        <h3
-          className="trayheading"
+        <button
+          onClick={handleViewAll}
+          className="viewAllBtn"
           style={{ paddingRight: "10px", cursor: "pointer" }}
         >
-          View All
-        </h3>
+          {"View All >"}
+        </button>
       </div>
       <Carousel responsive={responsive}>
         {(watchlist ? data?.shows : data)?.map((movie) => (

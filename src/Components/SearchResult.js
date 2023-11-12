@@ -4,9 +4,8 @@ import "../Style/searchresult.css";
 import Card from "./Card";
 
 const SearchResult = ({ searchValue }) => {
-  console.log(searchValue);
   const { data, isLoading, isError, get } = useGetRequest();
-  //   console.log(data);
+
   useEffect(() => {
     get(`/ott/show?search={"title":"${searchValue}"}`);
   }, [searchValue]);

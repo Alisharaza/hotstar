@@ -41,9 +41,8 @@ const userSlice = createSlice({
   name: "auth",
   initialState,
   reducers: {
-    isUserLoggedIn(state, action) {
+    isUserLoggedIn(state) {
       const token = localStorage.getItem("hotstar_token");
-      console.log("token", token);
       if (token) {
         const user = localStorage.getItem("hotstar_user");
         state.isAuthenticated = true;
@@ -51,7 +50,7 @@ const userSlice = createSlice({
         state.user = user;
       }
     },
-    isUserLogout(state) {
+    logoutUser(state) {
       localStorage.removeItem("hotstar_token");
       localStorage.removeItem("hotstar_user");
       return initialState;
@@ -65,7 +64,6 @@ const userSlice = createSlice({
       })
       .addCase(signUpUser.fulfilled, (state, { payload }) => {
         state.isAuthenticated = true;
-        // console.log("fulfilled", payload);
         const { token, data } = payload;
         state.user = data.user;
         localStorage.setItem("hotstar_token", token);
@@ -84,7 +82,6 @@ const userSlice = createSlice({
       })
       .addCase(logInUser.fulfilled, (state, { payload }) => {
         state.isAuthenticated = true;
-        // console.log("fulfilled", payload);
         const { token, data } = payload;
         state.user = data.user;
         localStorage.setItem("hotstar_token", token);
@@ -99,7 +96,6 @@ const userSlice = createSlice({
       });
   },
 });
-export const { isUserLoggedIn, isUserLogout, extraReducers } =
-  userSlice.actions;
+export const { isUserLoggedIn, logoutUser, extraReducers } = userSlice.actions;
 
 export default userSlice.reducer;

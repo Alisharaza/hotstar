@@ -68,3 +68,13 @@
 .loginBtn:hover {
   transform: scale3d(1.05, 1.05, 1) perspective(500px);
 }
+
+.logoutBtnWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 3rem;
+}
+.logoutBtn {
+  background: red;
+}
